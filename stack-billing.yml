@@ -40,6 +40,15 @@ services:
       - postgres_db
     ports:
       - 8080:8080 
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 500M
+        reservations:
+          cpus: "0.5"
+          memory: 250M
+
 #Billin app frontend service
   billingapp-front:
     build:
@@ -49,3 +58,11 @@ services:
       - billingapp-back
     ports:
       - 80:80 
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: 250M
+        reservations:
+          cpus: "0.1"
+          memory: 128M
