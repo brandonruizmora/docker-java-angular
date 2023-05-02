@@ -24,3 +24,21 @@ Orquestación compleja con servicios y imágenes independientes.
 - App Angular
 
 ---
+
+### Comandos orquestación
+
+Crear imagenes 
+
+`docker compose -f stack-billing.yml build`
+
+Construir imagenes y inicializar contenedores
+
+`docker compose -f stack-billing.yml up -d`
+
+Finalizar contenedores
+
+`docker compose -f stack-billing.yml stop`
+
+Finalizar y eliminar contenedores
+
+`docker compose -f stack-billing.yml down -d`
